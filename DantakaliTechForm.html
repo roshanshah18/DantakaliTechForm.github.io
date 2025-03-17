@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DantakaliTechForm</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7fafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Form Container */
+      .form-container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      /* Heading */
+      h2 {
+        font-size: 2rem;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+
+      /* Form Label */
+      label {
+        font-size: 1rem;
+        color: #555555;
+        margin-bottom: 8px;
+        display: inline-block;
+        text-align: left;
+      }
+
+      /* Form Input & Textarea */
+      input[type="email"],
+      input[type="text"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #333333;
+        margin-bottom: 20px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="email"]:focus,
+      input[type="text"]:focus,
+      input[type="tel"]:focus,
+      select:focus {
+        border-color: #4f6d7a;
+        outline: none;
+      }
+
+      /* Objective Question Styling */
+      .objective-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .objective-group label {
+        margin: 5px 0;
+      }
+
+      /* Submit Button */
+      button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #4f6d7a;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #3a4c59;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .form-container {
+          padding: 20px;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="tel"],
+        select {
+          font-size: 0.95rem;
+        }
+
+        button[type="submit"] {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>DantakaliTechForm</h2>
+      <form action="https://formspree.io/f/xwplpngw" method="POST">
+        <div>
+          <label for="fullName">Full Name:</label>
+          <input type="text" name="fullName" id="fullName" required />
+        </div>
+
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" name="phone" id="phone" required />
+        </div>
+
+        <div>
+          <label for="email">Your email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <!-- Objective Question (Multiple Choice) -->
+        <div class="objective-group">
+          <label for="question"
+            >What is your preferred mode of communication?</label
+          >
+          <label>
+            <input type="radio" name="question" value="Email" required /> Email
+          </label>
+          <label>
+            <input type="radio" name="question" value="Phone" required /> Phone
+          </label>
+          <label>
+            <input type="radio" name="question" value="Text Message" required />
+            Text Message
+          </label>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </body>
+</html>
